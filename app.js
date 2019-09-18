@@ -41,7 +41,12 @@ function paint(e) {
     gfx.moveTo(e.clientX, e.clientY); // Flyttat linjen till mus positionen.
 }
 
-// Deklarera eventlisteners
+// Deklarera eventlisteners för Desktop mus
+canvas.addEventListener('mousedown', startPosition);
+canvas.addEventListener('mouseup', slutPosition);
+canvas.addEventListener('mousemove', paint);
+
+// Deklarera eventlisteners för Mobile touch
 canvas.addEventListener('touchstart', startPosition);
 canvas.addEventListener('touchend', slutPosition);
 canvas.addEventListener('touchmove', paint);
