@@ -42,9 +42,9 @@ function paint(e) {
 }
 
 // Deklarera eventlisteners
-canvas.addEventListener('mousedown', startPosition);
-canvas.addEventListener('mouseup', slutPosition);
-canvas.addEventListener('mousemove', paint);
+canvas.addEventListener('touchstart', startPosition);
+canvas.addEventListener('touchend', slutPosition);
+canvas.addEventListener('touchmove', paint);
 
 
 
