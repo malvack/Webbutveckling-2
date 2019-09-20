@@ -44,6 +44,7 @@ canvas
     background-color: black;
     flex-direction: column;
     position: fixed;
+    z-index: -1;
 }
 
 #toolbar #colors {
@@ -51,6 +52,7 @@ canvas
     justify-content: space-around;
     height: 50%;
     align-items: center;
+
 }
 
 
