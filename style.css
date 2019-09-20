@@ -1,34 +1,100 @@
-canvas
-{
-    background-color: #fcfcfc;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 body {
     display: block;
     margin: 0px;
+    font-family: Verdana;
+}
+
+nav {
+    height: 10vh;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+}
+
+#menyLinks {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+}
+
+#menyLinks li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+canvas
+{
+    background-color: white;
+    flex-direction: column;
 }
 
 #toolbar {
+    height: 10vh;
     width: 100%;
-    height: 50px;
-    padding: 7px;
-    position: fixed;
     background-color: black;
-    text-align: center;
+    flex-direction: column;
+    position: fixed;
 }
 
-#colors {
-    float: center;
+#toolbar #colors {
+    display: flex;
+    justify-content: space-around;
+    height: 50%;
+    align-items: center;
 }
+
 
 .color {
     width: 30px;
     height: 30px;
     border-radius: 15px;
     border: 1px solid white;
-    display: inline-block;
-    margin-left: 10px;
-    
 }
 
-   
+/* Responsiv CSS */
+@media screen and (max-width: 758px) {
+
+    .linje {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+
+    #hamburgaren {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+
+    #menyLinks {
+        position: fixed;
+        background: black;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+    }
+
+    #menyLinks.open {
+        clip-path: circle(1200px at 90% -10%);
+    }
+
+    canvas {
+        flex-direction: column;
+    }
+}
