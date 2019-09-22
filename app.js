@@ -1,9 +1,6 @@
 // Deklarerar variabler
 const canvas = document.querySelector('canvas');
 const gfx = canvas.getContext("2d");
-const hamburgaren = document.querySelector('#hamburgaren');
-const menyLinks = document.querySelector('#menyLinks');
-const links = document.querySelectorAll('#menyLinks li');
 let colors = document.getElementsByClassName('color');
 let painting = false;
 
@@ -16,6 +13,7 @@ for (let i = 0; i < colors.length; i++) {
     colors[i].addEventListener('click', valjFarg);
 }
 
+// Funktioner
 function valjFarg(e) {
     let color = e.target; // Vilken färg klickades på?
     gfx.strokeStyle = color.style.backgroundColor; // Sätt penfärg till backgrundsfärgen på knappen.
@@ -47,12 +45,8 @@ function paint(e) {
     gfx.moveTo(e.clientX, e.clientY); // Flyttat linjen till mus positionen.
 }
 
-function menyToggle() {
-    menyLinks.classList.toggle("open"); // Byt mellan #menyLinks och #menyLinks.open 
-}
-
 // Deklarera eventlisteners för Desktop mus
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', slutPosition);
 canvas.addEventListener('mousemove', paint);
-hamburgaren.addEventListener('click', menyToggle);
+

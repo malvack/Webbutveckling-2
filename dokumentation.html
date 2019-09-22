@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projektarbetet - Dokumentation</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+    <nav>
+        <div id="hamburgaren" title="Meny">
+            <div class="linje"></div>
+            <div class="linje"></div>
+            <div class="linje"></div>
+        </div>
+        <ul id="menyLinks">
+            <li><a href="index.html" title="Rita">Rita</a></li>
+            <li><a href="redovisning.html" title="Redovisning">Redovisning</a></li>
+            <li><a href="presentation.html" title="Presentation">Presentation</a></li>
+            <li><a href="dokumentation.html" title="Dokumentation">Dokumentation</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Dokumentation</h1>
+        
+        <h2>Meny</h2>
+        <p>Längst upp till höger på alla html sidor finns en responsiv meny som vid upplösningar under 758 pixlar ändras till en hamburgarmeny.<br>
+           Meny är även animerad för att ge en snygg effekt av en växande bubbla som växer.
+        </p>
+        
+        <h2>index.html</h2>
+        <p>Innehåller canvas för att kunna rita på. Nedan finns en toolbar som innehåller färger man kan använda.<br>
+            Varje färgknapp har en javascript eventlistener knyten till sig som hämtar bakgrundsfärgen på elementet
+            och knyter denna färgen till color variablens som används för att bvestämma färgen på stroke.
+        </p>
+
+        <h2>app.js</h2>
+        <p>Innehåller javascript koden för att kunna rita på index.html. <br>
+            Dokumentet innehåller kommenterad kod som förklarar vad varje funktion gör.
+        </p>
+    
+        <h2>meny.js</h2>
+        <p>Innehåller javascript koden för att få den responsiva hamburgarmenyn att fungera. <br>
+            Dokumentet innehåller kommenterad kod som förklarar vad varje funktion gör.
+        </p>
+
+        <h2>style.css</h2>
+        <p>Innehåller all CSS koden för att få hemsidan att se snygg ut.
+        </p>        
+
+        <h2>redovisning.html</h2>
+        <p>Innehåller redovisningstexten.
+        </p>   
+
+        <h2>presentation.html</h2>
+        <p>Innehåller presentationstexten.
+        </p>   
+        
+        <h2>dokumentation.html</h2>
+        <p>Innehåller dokumentationstexten.
+        </p>   
+
+    </article>
+
+    <script src="meny.js"></script>
+
+</body>
+
+</html>

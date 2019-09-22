@@ -52,7 +52,6 @@ canvas
     justify-content: space-around;
     height: 50%;
     align-items: center;
-
 }
 
 
@@ -61,6 +60,32 @@ canvas
     height: 30px;
     border-radius: 15px;
     border: 1px solid white;
+}
+
+article {
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+}
+
+article h1 {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-bottom: 10px;
+}
+
+article h2 {
+    font-size: 16px;
+    padding-left: 12vw;
+    padding-right: 12vw;
+
+}
+
+
+article p {
+    padding-left: 15vw;
+    padding-right: 15vw;    
+    padding-bottom: 20px;
 }
 
 /* Responsiv CSS */
