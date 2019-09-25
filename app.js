@@ -19,11 +19,13 @@ function valjFarg(e) {
     gfx.strokeStyle = color.style.backgroundColor; // Sätt penfärg till backgrundsfärgen på knappen.
 }
 
+// Mus start
 function startPosition(e) {
     painting = true;
     paint(e); 
 }
 
+// Mus start
 function slutPosition() {
     painting = false;    
     gfx.beginPath(); // Skapa en ny path när man släpper musknappen.
@@ -45,8 +47,14 @@ function paint(e) {
     gfx.moveTo(e.clientX, e.clientY); // Flyttat linjen till mus positionen.
 }
 
+
 // Deklarera eventlisteners för Desktop mus
 canvas.addEventListener('mousedown', startPosition);
 canvas.addEventListener('mouseup', slutPosition);
 canvas.addEventListener('mousemove', paint);
+
+// Deklarera eventlisteners för Touch
+//canvas.addEventListener('touchstart', startPositionTouch);
+//canvas.addEventListener('touchend', slutPositionTouch);
+//canvas.addEventListener('touchmove', paint);
 
